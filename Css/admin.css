@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'orbiton' sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(2, 2, 2);
+    background: url(../image/fond5.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
+}
+.formulaire{
+    width: 420;
+    color: white;
+    background: transparent;
+    border-radius: 15px;
+    padding: 30px 40px;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, rgb(0, 0, 0, .1));
+    
+}
+.formulaire h1{
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 20px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.formulaire h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.formulaire .label{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    background:black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.label input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 40px;
+    color: white;
+    font-size: 14px;
+    padding: 20px 45px 20px 20px;
+}
+.label input::placeholder{
+    color: white;
+}
+.formulaire .bouton{
+    width: 100%;
+    height: 45px;
+    background:beige;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
+   
+}
+.formulaire .compte{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.compte p{
+    color: black;
+    font-weight: 600;
+}
+.compte p a {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+   text-decoration: none;
+}
+.compte p a:hover{
+    text-decoration: #19026e underline;
+    text-decoration-thickness:3px; 
+}

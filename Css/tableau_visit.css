@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'orbiton' sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: beige;
+    background: url(../image/fond5.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tete {
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, rgb(0, 0, 0, .1));
+    text-align: center;
+    padding: 40px 30px;
+    font-weight: bold;
+}
+
+.tete h1 {
+    padding: 10px;
+    font-size: 39px;
+}
+
+.tete p {
+    font-size: 20px;
+}
+
+/*style des cases*/
+.case {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.AB {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.case .case1 {
+    text-align: center;
+    background: #1C2C4C;
+    padding: 20px 30px 10px;
+    display: 1;
+    min-width: 150px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.case1 p {
+    padding: 10px;
+}
+
+.case .case2 {
+    text-align: center;
+    background: #0B3B3F;
+    padding: 20px 30px 10px;
+    border-radius: 5px;
+    color: white;
+    display: 1;
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.case2 p {
+    padding: 10px;
+}
+
+.case .case3 {
+    text-align: center;
+    background: #A1722F;
+    padding: 20px 30px 10px;
+    border-radius: 5px;
+    color: white;
+    display: 1;
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.case3 p {
+    padding: 10px;
+}
+
+/*style du milieu*/
+.milieu {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.BC {
+    font-weight: bold;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, rgb(0, 0, 0, .1));
+    border-radius: 10px;
+    height: 170px;
+    padding: 10Px 20px;
+}
+
+.BC .p1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.selection {
+    background: transparent;
+    padding: 5px 10px;
+}
+
+.soumission {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bouton {
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background: rgb(81, 81, 202);
+    color: white;
+}
+
+.quitter {
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: red;
+}
+
+.quitter a {
+    text-decoration: none;
+    color: red;
+}
+
+/* style des candidats*/
+.txt {}
+
+.bas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.choix {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.choix1 {
+    background: blue;
+    margin-top: 20px;
+    font-size: bold;
+}
+
+.choix1 img {
+    height: 150px;
+    max-width: 500px;
+
+}
+
+.choix2 {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100px;
+}
+
+.choix3 {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100px;
+}

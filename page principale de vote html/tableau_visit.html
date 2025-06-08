@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Acceuil vote visiteur</title>
+    <link rel="stylesheet" href="../Css/tableau_visit.css">
+</head>
+
+<body>
+    <header>
+        <div class="tete">
+            <h1>Vote Online-Table de vote</h1>
+            <p>Bienvenue, cher électeur !</p>
+        </div>
+    </header>
+    <div class="case">
+        <div class="AB">
+            <div class="case1">
+                <h3>Total des électeurs</h3>
+                <p>124</p>
+            </div>
+            <div class="case2">
+                <h3>Votes soumis</h3>
+                <p>45</p>
+            </div>
+            <div class="case3">
+                <h3>Candidats disponibles</h3>
+                <p>5</p>
+            </div>
+        </div>
+    </div>
+    <div class="milieu">
+        <div class="BC">
+            <h2>Voter maintenant</h2>
+            <p class="p1">Choisissez votre Candidats:</p>
+            <form>
+                <div class="formulaire">
+                    <select class="selection" id="Candidat">
+                        <option selected disabled>-- Sélectionner un Candidat --</option>
+                        <option id="CandidatA">Candidat A</option>
+                        <option id="CandidatB">Candidat B</option>
+                        <option id="CandidatC">Candidat C</option>
+                    </select>
+                </div>
+                <div class="soumission">
+                    <button class="bouton" type="submit">Soumettre le vote</button>
+                    <button class="quitter" type="submit"><a href="index.html">Se déconnecter</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bas">
+        <div class="choix">
+            <h2 class="txt">NOS CANDIDATS</h2>
+            <div class="choix1" id="CandidatA">
+                <img src="../image/candidat1.JPG" alt="candidat1">
+                <h3>CandidatA</h3>
+                <p> Visionnaire, engagéet prêt pour le changement</p>
+            </div>
+            <div class="choix2" id="CandidatB">
+                <img src="" alt="">
+                <h3>Candidat B</h3>
+                <p>Visionnaire, engagéet prêt pour le changement</p>
+            </div>
+            <div class="choix3" id="CandidatB">
+                <img src="" alt="">
+                <h3>Candidat C</h3>
+                <p>Visionnaire, engagéet prêt pour le changement</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
