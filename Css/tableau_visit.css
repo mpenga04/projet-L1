@@ -175,7 +175,7 @@ body {
 .contenu .box {
     width: 350px;
     margin-top: 20px;
-    border: 20px solid #fff;
+    border: 15px solid #fff;
     box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
     margin-bottom: 40px;
 }
