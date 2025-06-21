@@ -14,15 +14,13 @@
             <h1>Connexion</h1>
             <h2>Veuillez remplir ces champs</h2>
             <div class="label">
-                <input type="text" name="nom" id="nomipunt" placeholder="Entrez votre nom" required>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Entrez votre pseudo" required>
             </div>
             <div class="label">
                 <input type="tel" name="email" id="tellinput" placeholder="votre mot de passe" required>
             </div>
-            <div class="label">
-                <input type="email" name="email" id="emailinput" placeholder="email ex:umbrya@gmail.com" required>
-            </div>
-            <button type="submit" class="bouton"><a href="tableau_visit.html">Se connecter</a></button>
+
+            <button type="submit" class="bouton">Se connecter</button>
             <div class="compte">
                 <p>Don't have an account? <a href="inscription.html">create an account</a></p>
             </div>

@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>Accueil - VoteOn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <header>
-      <nav class="navbar">
-        <div class="logo">
-          <span style="font-weight: bold;" class="span1">Vote</span>
-          <span style="font-weight: bold;" class="span2">Online</span>
-        </div>
-        <ul class="navigation"> 
-        <li class="lien"> <a href="index.html">Accueil</a></li>
-        <li class="lien"> <a href="a_propos.html">About</a></li>
-        <li class="lien"> <a href="connexion.html">Connexion</a></li>
-        <li class="lien"> <a href="inscription.html">S'inscrire</a></li>
-        <li class="lien"> <a href="admin.html">Admin</a></li>
-      </ul>
-    </nav> 
+  <nav class="navbar">
+    <div class="logo">
+      <span style="font-weight: bold;" class="span1">Vote</span>
+      <span style="font-weight: bold;" class="span2">Online</span>
+    </div>
+    <ul class="navigation">
+      <li class="lien"> <a href="index.html">Accueil</a></li>
+      <li class="lien"> <a href="a_propos.html">About</a></li>
+      <li class="lien"> <a href="connexion.html">Connexion</a></li>
+      <li class="lien"> <a href="inscription.php">S'inscrire</a></li>
+      <li class="lien"> <a href="admin.html">Admin</a></li>
+    </ul>
+  </nav>
 </header>
 <section class="hero">
   <div class="hero-content">
     <h1><span class="small-text">VOTE</span> <span class="main-text">ONLINE</span></h1>
     <p>Vote Online est une plateforme qui vous permet de voter en toute tranquillité et anonymats.</p><br>
-    <button class="boutton"><a href="connexion.html">S'inscrire</a></button>
+    <button class="boutton"><a href="inscription.php">S'inscrire</a></button>
   </div>
-</section> 
-<footer>&copy;2025 projet de fin d'année realisé par Benji</footer>
+  <div id="modalPolitique"
+    style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000000a0;"></div>
+  <div style="background: white; margin: 10px;">
+
+  </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+    <h2>VoteOn</h2>
+    <ul class="liens-footer">
+      <li><a href="#">Plan du site</a></li>
+      <li><a href="#" onclick="document.getElementById('modalPolitique').style.display='block'">Politique de
+          confidentialité</a></li>
+      <li><a href="#">Conditions d'utilisation</a></li>
+    </ul>
+
+    <div class="footer-icons">
+      <a href="https://facebook.com/Benji"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/mr_mpenga" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://Snapchat.com/add/benitompenga" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="mailto:mpengabenji@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/243973529273" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <p class="copyright">Copyright © 2025 VoteOn, Inc.</p>
+  </div>
+</footer>
 </body>
+
 </html>

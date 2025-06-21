@@ -1,19 +1,21 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:'orbiton' sans-serif;
+  font-family: 'orbiton' sans-serif;
 }
+
 body {
   margin: 0;
   background-color: beige;
-  background: url(../image/fond5.JPG);
+  /* background: url(../image/fond5.JPG);
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat ;
+  background-repeat: no-repeat;*/
 }
+
 /*barre de navigation*/
-.navbar{
+.navbar {
   display: flex;
   justify-items: center;
   justify-content: space-between;
@@ -22,12 +24,14 @@ body {
   margin: 20px;
   font-weight: bold;
 }
-.logo{
- position: relative;
- text-align: center;
- width: fit-content;
+
+.logo {
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
-.span1{
+
+.span1 {
   display: block;
   font-size: 50px;
   font-weight: bold;
@@ -39,51 +43,55 @@ body {
   top: -35px;
 }
 
-.span2{
+.span2 {
   display: block;
   font-size: 64px;
   font-weight: bold;
   background: #C8BFE7;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: relative;
-  z-index:1;
+  z-index: 1;
   letter-spacing: 2px;
 }
 
-.navigation{
+.navigation {
   display: flex;
   gap: 20px;
   text-align: center;
   padding: 30px 40px;
   margin: 0%;
 }
-.lien{
+
+.lien {
   list-style: none;
   text-decoration: none;
   text-align: center;
   border: none;
 }
+
 .lien a {
   text-decoration: none;
   color: black;
-  padding: 4px 8px; 
+  padding: 4px 8px;
   transition: background-color 0.3s, color 0.3s;
-  border-radius: 6px; 
+  border-radius: 6px;
   font-weight: bold;
   margin-left: 20px;
   font-size: 18px;
   border: none;
 }
+
 .lien a:hover {
-  text-decoration:red underline;
-  text-decoration-thickness:3px ;
-  text-underline-offset:4px; 
+  text-decoration: red underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
   cursor: pointer;
   background: #19026e;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /*texte du milieu*/
 .hero {
   display: flex;
@@ -117,10 +125,11 @@ body {
   display: block;
   font-weight: 500;
   font-size: 2rem;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   letter-spacing: 1px;
 }
-p{
+
+p {
   background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,32 +141,104 @@ p{
   background: #C8BFE7;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: 2px;  
+  letter-spacing: 2px;
 }
-button{
+
+button {
   background: none;
   border: none;
-}  
+}
+
 button a {
- text-decoration: underline;
-  background:black;
+  text-decoration: underline;
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-size: 1rem;
 }
-.boutton a:hover{
+
+.boutton a:hover {
   background-color: #19026e;
   cursor: pointer;
-  text-decoration:red underline;
-  text-decoration-thickness:3px; 
- 
+  text-decoration: red underline;
+  text-decoration-thickness: 3px;
+
 }
-footer{
+
+/*footer {
   background: linear-gradient(90deg, #ff0066, #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   padding: 30px 40px;
+}*/
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 10px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
+.footer-dark h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.liens-footer {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-icons {
+  margin: 20px 0;
+}
+
+.footer-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+  line-height: 18px;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.footer-icons a:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+}
+
+.lang-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-dark .copyright {
+  font-size: 13px;
+  margin-top: 30px;
+  color: #ccc;
+}
