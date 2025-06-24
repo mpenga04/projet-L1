@@ -3,19 +3,22 @@ session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=vote;charset=utf8', 'root', '');
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+$message = '';
+
 if (isset($_POST['Soumettre'])) {
-    if ((!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']))) {
+    if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])) {
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password = password_hash($password, PASSWORD_DEFAULT);
         $insert = $bdd->prepare('INSERT INTO user (pseudo, email, password) VALUES (?, ?, ?)');
         $insert->execute(array($pseudo, $email, $password));
+        header('Location: dashboard_electeur.php');
+        exit(); // Ajoute exit() après la redirection
     } else {
-        echo "Veuillez remplir tous les champs";
+        $message = "Veuillez remplir tous les champs";
     }
 }
-
 ?>
 
 <!DOCTYPE html>

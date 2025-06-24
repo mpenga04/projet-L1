@@ -88,8 +88,7 @@ body {
   text-underline-offset: 4px;
   cursor: pointer;
   background: #19026e;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 }
 
 /*texte du milieu*/

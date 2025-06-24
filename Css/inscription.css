@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(2, 2, 2);
+    background: beige;
     /* background: url(../image/fond5.JPG);
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@ body {
 .formulaire {
     width: 420;
     color: white;
-    background: transparent;
+    background: gray;
     border-radius: 15px;
     padding: 30px 40px;
     border: 2px solid rgb(255, 255, 255, .2);
