@@ -1,26 +1,28 @@
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=vote;charset=utf8', 'root', '');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once '../page_php/connexion.php';
+if (isset($_POST['pseudo'], $_POST['email'], $_POST['password'])) {
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = $_POST['password'];
 
-$message = '';
+    // Vérifier l'existence
+    $check = $pdo->prepare("SELECT * FROM electeurs WHERE email = ?");
+    $check->execute([$email]);
 
-if (isset($_POST['Soumettre'])) {
-    if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-        $pseudo = htmlspecialchars($_POST['pseudo']);
-        $email = htmlspecialchars($_POST['email']);
-        $password = htmlspecialchars($_POST['password']);
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $insert = $bdd->prepare('INSERT INTO user (pseudo, email, password) VALUES (?, ?, ?)');
-        $insert->execute(array($pseudo, $email, $password));
-        header('Location: dashboard_electeur.php');
-        exit(); // Ajoute exit() après la redirection
-    } else {
-        $message = "Veuillez remplir tous les champs";
+    if ($check->rowCount() > 0) {
+        echo "❌ Cet email est déjà inscrit.";
+        exit;
     }
+
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $insert = $pdo->prepare("INSERT INTO electeurs (pseudo, email, password) VALUES (?, ?, ?)");
+    $insert->execute([$pseudo, $email, $hash]);
+
+    header('Location: connexion.php');
+    exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 

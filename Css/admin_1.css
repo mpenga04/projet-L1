@@ -1,0 +1,39 @@
+/* Tableau des élections */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #aaa;
+    text-align: left;
+}
+
+th {
+    background-color: #253B43;
+    color: white;
+}
+
+/* Boutons */
+button {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.valider {
+    background-color: green;
+    color: white;
+}
+
+.supprimer {
+    background-color: red;
+    color: white;
+}

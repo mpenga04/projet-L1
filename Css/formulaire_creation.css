@@ -49,3 +49,10 @@ body {
     cursor: pointer;
     background: #19026e;
 }
+
+.retour {
+    text-decoration: red underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}

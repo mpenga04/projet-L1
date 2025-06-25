@@ -1,30 +1,22 @@
-<?php 
-$bdd= new PDO('mysql:host=localhost;dbname=vote;charset=utf8', 'root', '');
-if(isset($_POST[Se connecter])) {
-    if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
-        $pseudo = htmlspecialchars($_POST['pseudo']);
-        $email = htmlspecialchars($_POST['password']);
-        
-        // Vérification des identifiants dans la base de données
-        $requete = $bdd->prepare('SELECT * FROM user WHERE pseudo = ? AND email = ?');
-        $requete->execute(array($pseudo, $email));
-        
-        if($requete->rowCount() > 0) {
-            // Connexion réussie
-            session_start();
-            $_SESSION['pseudo'] = $pseudo;
-            header('Location: page_principale.php'); // Redirection vers la page principale
-            exit();
-        } else {
-            $message = "Identifiants incorrects";
-        }
+<?php
+session_start();
+require_once '../page_php/connexion.php';
+if (isset($_POST['email'], $_POST['password'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $check = $pdo->prepare("SELECT * FROM electeurs WHERE email = ?");
+    $check->execute([$email]);
+    $user = $check->fetch();
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['electeur_id'] = $user['id'];
+        $_SESSION['pseudo'] = $user['pseudo'];
+        header("Location: dashboard_electeur.php");
+        exit;
     } else {
-        $message = "Veuillez remplir tous les champs";
+        echo " Email ou mot de passe incorrect.";
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,16 +29,15 @@ if(isset($_POST[Se connecter])) {
 
 <body>
     <div class="formulaire">
-        <form action="">
+        <form method="POST" action="">
             <h1>Connexion</h1>
             <h2>Veuillez remplir ces champs</h2>
             <div class="label">
-                <input type="text" name="pseudo" id="pseudo" placeholder="Entrez votre pseudo" required>
+                <input type="text" name="email" id="emailinput" placeholder="votre email" required>
             </div>
             <div class="label">
-                <input type="tel" name="email" id="tellinput" placeholder="votre mot de passe" required>
+                <input type="password" name="password" id="passwordinput" placeholder="votre mot de passe" required>
             </div>
-
             <button type="submit" class="bouton" name="Se connecter">Se connecter</button>
             <div class="compte">
                 <p>Don't have an account? <a href="inscription.php">create an account</a></p>

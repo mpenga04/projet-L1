@@ -26,11 +26,11 @@ $elections = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Administration des Élections</title>
-    <link rel="stylesheet" href="../Css/admin1.css">
+    <link rel="stylesheet" href="../Css/admin_1.css">
 </head>
 
 <body>
-    <h1>Liste des élections</h1>
+    <h1 style="text-align:center;">Liste des élections</h1>
     <table>
         <tr>
             <th>ID</th>
@@ -44,28 +44,23 @@ $elections = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <td><?= $election['id'] ?></td>
                 <td><?= htmlspecialchars($election['titre']) ?></td>
-                <td>
-                    <?= $election['date_debut'] ?> → <?= $election['date_fin'] ?>
-                </td>
-                <td>
-                    <strong><?= strtoupper($election['statut']) ?></strong>
-                </td>
+                <td><?= $election['date_debut'] ?> → <?= $election['date_fin'] ?></td>
+                <td><strong><?= strtoupper($election['statut']) ?></strong></td>
                 <td>
                     <?php if ($election['statut'] === 'en_attente'): ?>
                         <a href="?action=valider&id=<?= $election['id'] ?>">
-                            <button style="background-color: green; color: white;">Valider</button>
+                            <button class="valider">Valider</button>
                         </a>
                     <?php endif; ?>
                     <a href="?action=supprimer&id=<?= $election['id'] ?>" onclick="return confirm('Supprimer cette élection ?')">
-                        <button style="background-color: red; color: white;">Supprimer</button>
+                        <button class="supprimer">Supprimer</button>
                     </a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
+    <a href="admin_2.php"><button>Gérer les candidats</button></a>
+    <a href="dashboard_admin.php"><button>Retour</button></a>
 </body>
 
 </html>
-<?php
-echo '<a href="admin_2.php">suivant</a>';
-?>

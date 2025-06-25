@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->execute([$titre, $date_debut, $date_fin, $description]);
 
     if ($result) {
-        echo "Élection créée avec succès ! 🎉";
-        echo '<a href="admin_e.php">Voir la liste des élections</a>';
+        echo "Élection créée avec succès ! ";
+        echo '<a href="admin_1.php"><button>Voir la liste des élections</button></a>';
     } else {
-        echo "Une erreur s'est produite... 😢";
+        echo "Une erreur s'est produite";
     }
 }
 ?>
@@ -57,3 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="submit" value="Créer" class="case1">
     </div>
     </form>
+    <a href="admin_1.php" class="retour"><button>Voir la liste des élections</button></a>
+</body>
+
+</html>
