@@ -10,7 +10,7 @@ if (isset($_POST['pseudo'], $_POST['email'], $_POST['password'])) {
     $check->execute([$email]);
 
     if ($check->rowCount() > 0) {
-        echo "❌ Cet email est déjà inscrit.";
+        echo "Cet email est déjà inscrit.";
         exit;
     }
 
@@ -19,7 +19,7 @@ if (isset($_POST['pseudo'], $_POST['email'], $_POST['password'])) {
     $insert = $pdo->prepare("INSERT INTO electeurs (pseudo, email, password) VALUES (?, ?, ?)");
     $insert->execute([$pseudo, $email, $hash]);
 
-    header('Location: connexion.php');
+    header('Location: connexion_electeur.php');
     exit;
 }
 ?>

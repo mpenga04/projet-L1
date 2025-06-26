@@ -1,7 +1,7 @@
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=vote', 'root', '');
 
-// Traitement ajout candidat
+// Traitement et ajout d'un candidat
 if (isset($_POST['election_id'], $_POST['nom'])) {
     $nom = trim($_POST['nom']);
     $election_id = intval($_POST['election_id']);
@@ -20,7 +20,7 @@ if (isset($_GET['delete'])) {
 // Récupérer toutes les élections
 $elections = $pdo->query("SELECT * FROM elections")->fetchAll();
 
-// Élection sélectionnée
+// Selection d'une élection
 $election_id_selected = $_GET['election'] ?? $elections[0]['id'] ?? null;
 
 // Candidats de cette élection

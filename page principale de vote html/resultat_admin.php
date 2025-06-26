@@ -1,7 +1,7 @@
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=vote', 'root', '');
 
-// Clôturer une élection (si demandé)
+// Clôture d'une élection (si demandé)
 if (isset($_GET['cloturer']) && isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $stmt = $pdo->prepare("UPDATE elections SET statut = 'terminée' WHERE id = ?");
@@ -67,6 +67,7 @@ $elections = $pdo->query("SELECT * FROM elections ORDER BY id DESC")->fetchAll(P
 
         <hr />
     <?php endforeach; ?>
+    <a href="admin_1.php">Retour au tableau de bord</a>
 </body>
 
 </html>

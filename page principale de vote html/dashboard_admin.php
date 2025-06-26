@@ -3,7 +3,7 @@
 $pdo = new PDO('mysql:host=localhost;dbname=vote', 'root', '');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupération des données du formulaire
+
     $titre = $_POST['titre'];
     $date_debut = $_POST['date_debut'];
     $date_fin = $_POST['date_fin'];

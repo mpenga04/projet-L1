@@ -38,7 +38,7 @@ $elections = $pdo->query("SELECT * FROM elections WHERE statut = 'active'")->fet
                 ?>
 
                 <?php if ($a_vote): ?>
-                    <p class="deja-vote">🗳️ Vous avez déjà voté pour cette élection.</p>
+                    <p class="deja-vote">Vous avez déjà voté pour cette élection.</p>
                 <?php else: ?>
                     <form action="vote.php" method="POST" class="vote-form">
                         <input type="hidden" name="election_id" value="<?= $election['id'] ?>">
@@ -60,7 +60,7 @@ $elections = $pdo->query("SELECT * FROM elections WHERE statut = 'active'")->fet
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
-        <a href="public.php">📊 Voir les résultats des élections clôturées</a>
+        <a href="public.php">Voir les résultats des élections clôturées</a>
     </div>
 </body>
 

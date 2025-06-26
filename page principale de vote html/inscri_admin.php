@@ -13,12 +13,12 @@ if (isset($_POST['pseudo'], $_POST['email'], $_POST['password'])) {
         echo "Cet email est déjà utilisé. Essayez un autre.";
         exit;
     }
-    // Hasher le mot de passe
+    // la fonction hash le mot de passe
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Insérer dans la base de données
     $insert = $bdd->prepare("INSERT INTO admin (pseudo, email, password) VALUES (?, ?, ?)");
     $insert->execute([$pseudo, $email, $hashed_password]);
-    echo "✅ Inscription réussie ! Vous pouvez maintenant vous connecter.";
+    echo "Inscription réussie ! Vous pouvez maintenant vous connecter.";
     header('Location: admin.php');
     exit;
 }
