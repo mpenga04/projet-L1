@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result) {
         echo "Élection créée avec succès ! ";
-        echo '<a href="admin_1.php"><button>Voir la liste des élections</button></a>';
     } else {
         echo "Une erreur s'est produite";
     }

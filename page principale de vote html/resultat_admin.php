@@ -67,7 +67,7 @@ $elections = $pdo->query("SELECT * FROM elections ORDER BY id DESC")->fetchAll(P
 
         <hr />
     <?php endforeach; ?>
-    <a href="admin_1.php">Retour au tableau de bord</a>
+    <a href="admin_1.php"><button>Retour au tableau de bord</button></a>
 </body>
 
 </html>

@@ -60,7 +60,8 @@ $elections = $pdo->query("SELECT * FROM elections WHERE statut = 'active'")->fet
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
-        <a href="public.php">Voir les résultats des élections clôturées</a>
+        <a href="public.php"><button>Voir les résultats des élections clôturées</button></a><br>
+        <a href="index.html"><button>Quitter l'élection</button></a>
     </div>
 </body>
 
